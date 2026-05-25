@@ -1,0 +1,18 @@
+
+function createUniqueJsBasicsTags(tags) {
+  const uniqueTags = [];
+
+  for (let tag of tags) {
+    const normalizedTag = tag.trim().toLowerCase();
+
+    if (normalizedTag === "") {
+      continue;
+    }
+
+    if (!uniqueTags.includes(normalizedTag)) {
+      uniqueTags.push(normalizedTag);
+    }
+  }
+
+  return uniqueTags;
+}
