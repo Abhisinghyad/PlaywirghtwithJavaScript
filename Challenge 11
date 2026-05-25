@@ -1,0 +1,29 @@
+//Summarize Js Basics Matrix
+
+function summarizeJsBasicsMatrix(matrix) {
+  const summary = {
+    total: 0,
+    passed: 0,
+    failed: 0,
+    failedCases: []
+  };
+
+  for (let row of matrix) {
+    for (let result of row) {
+      summary.total++;
+
+      const value = result.toLowerCase();
+
+      if (value.includes("pass")) {
+        summary.passed++;
+      }
+
+      if (value.includes("fail")) {
+        summary.failed++;
+        summary.failedCases.push(result);
+      }
+    }
+  }
+
+  return summary;
+}
