@@ -1,0 +1,12 @@
+//Normalize Js Basics Label
+function normalizeJsBasicsLabel(label) {
+  let normalized = label
+    .trim()                          // Remove leading
+    .toLowerCase()                   // Convert to lowercase
+    .replace(/[^a-z0-9]+/g, "-")     // Replace non-alphanumeric groups with "-"
+    .replace(/^-+|-+$/g, "");        // Remove starting/ending hyphens
+
+  return normalized
+    ? "js-basic-" + normalized
+    : "js-basic";
+}
