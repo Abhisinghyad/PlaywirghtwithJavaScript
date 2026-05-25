@@ -1,0 +1,14 @@
+function buildJsBasicsChecklist(items) {
+  const checklist = [];
+  let count = 1;
+
+  for (let item of items) {
+    const trimmedItem = item.trim();
+    if (trimmedItem === "") {
+      continue;
+    }
+    checklist.push(`${count}. ${trimmedItem} - TODO`);
+    count++;
+  }
+  return checklist;
+}
