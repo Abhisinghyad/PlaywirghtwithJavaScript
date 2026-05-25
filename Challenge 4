@@ -1,0 +1,18 @@
+//Map Js Basics Keyword Meaning
+function getJsBasicsKeywordMeaning(term) {
+  const keywordMap = {
+    node: "runtime",
+    v8: "engine",
+    npm: "package-manager",
+    javascript: "programming-language",
+    ecmascript: "standard",
+    null: "empty-value",
+    undefined: "not-assigned"
+  };
+
+  // Normalize input
+  term = term.trim().toLowerCase();
+
+  // Return mapped value or "unknown"
+  return keywordMap[term] || "unknown";
+}
