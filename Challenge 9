@@ -1,0 +1,9 @@
+//Build Js Basics Run Label
+
+function buildJsBasicsRunLabel(suiteName, environment, buildNumber) {
+  const formattedSuite = suiteName.trim();
+  const formattedEnv = environment.trim().toLowerCase();
+  const formattedBuild = `build-${buildNumber}`;
+
+  return `${formattedSuite} | ${formattedEnv} | ${formattedBuild}`;
+}
