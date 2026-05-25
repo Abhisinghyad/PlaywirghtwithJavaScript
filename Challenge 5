@@ -1,0 +1,28 @@
+//Filter Supported Js Basics Topics
+function filterSupportedJsBasicsTopics(topics) {
+  const aliasMap = {
+    node: "node",
+    runtime: "node",
+    v8: "v8",
+    engine: "v8",
+    npm: "npm",
+    "package-manager": "npm"
+  };
+
+  const result = [];
+
+  for (let topic of topics) {
+    // Normalize topic
+    topic = topic.trim().toLowerCase();
+
+    // Convert alias to canonical name
+    const canonical = aliasMap[topic];
+
+    // Add only supported unique values
+    if (canonical && !result.includes(canonical)) {
+      result.push(canonical);
+    }
+  }
+
+  return result;
+}
